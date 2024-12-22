@@ -10,6 +10,7 @@ const persona = {
     }
 }
 
+// Hace una copia del objeto persona
 const persona2 = {...persona}
 persona2.nombre = 'Esteban'
 
