@@ -1,10 +1,22 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+// Escribir irm y presionar tab para importar React
+// Importaciones para renderizar
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+// Todo en React es un componente(función)
+// Todos los nombres de los functions components deben empezar con mayúscula UpperCamelCase
+const App = () => {
+    // document.createElement('h1')
+    return (
+        <>
+            <h1>Hola Mundo</h1>
+        </>
+    )
+} 
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+    // Se aconceja usar el modo estricto
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 )
