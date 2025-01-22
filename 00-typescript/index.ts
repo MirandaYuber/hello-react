@@ -303,3 +303,9 @@ const gameBoard: GameBoars = [
 // con un limite de elementos
 type RGB = [number, number, number]
 const RGB: RGB = [255, 0, 125] // 0 - 255
+
+// Estas tienen un problema y es que permiten agregar mas elementos
+// Para evitarlo se recomienda usar readonly
+type RGB2 = readonly[number, number, number]
+const RGB2: RGB2 = [255, 0, 125]
+// RGB2.push(2) // Error
