@@ -299,13 +299,53 @@ const gameBoard: GameBoars = [
     ['X', 'O', '']
 ]
 
-// Tuplas: Es un array (que en TypeScript es una tupla) 
-// con un limite de elementos
+// Tuplas: Es un array con una longitud fija
 type RGB = [number, number, number]
 const RGB: RGB = [255, 0, 125] // 0 - 255
 
-// Estas tienen un problema y es que permiten agregar mas elementos
+// Estas tienen un problema y es que son mutables
 // Para evitarlo se recomienda usar readonly
 type RGB2 = readonly[number, number, number]
 const RGB2: RGB2 = [255, 0, 125]
 // RGB2.push(2) // Error
+
+
+// Enums : Enumeración
+// Sirven para tener una lista de valores finitos
+// Se puede pasar como tipo de parametro
+
+// En JS
+// const ERROR_TYPES = {
+//     NOT_FOUND: 404,
+//     INTERNAL_SERVER_ERROR: 500,
+//     UNAUTHORIZED: 401
+// }
+
+// function mostrarMensaje (tipoDeError: number) {
+//     if (tipoDeError === ERROR_TYPES.NOT_FOUND) {
+//         console.log('Página no encontrada');
+//     } else if (tipoDeError === ERROR_TYPES.INTERNAL_SERVER_ERROR) {
+//         console.log('Error interno del servidor');
+//     } else if (tipoDeError === ERROR_TYPES.UNAUTHORIZED) {
+//         console.log('No autorizado');
+//     }
+// }
+
+// En TS
+// Agregar el const para evitar generar mas código 
+// (solo usar si se va cosnsumir dentro de mi aplicación y no fuera)
+const enum ERROR_TYPES {
+    NOT_FOUND = 'notfound',
+    INTERNAL_SERVER_ERROR = 'internalservererror',
+    UNAUTHORIZED = 'unauthorized'
+}
+
+function mostrarMensaje (tipoDeError: ERROR_TYPES) {
+    if (tipoDeError === ERROR_TYPES.NOT_FOUND) {
+        console.log('Página no encontrada');
+    } else if (tipoDeError === ERROR_TYPES.INTERNAL_SERVER_ERROR) {
+        console.log('Error interno del servidor');
+    } else if (tipoDeError === ERROR_TYPES.UNAUTHORIZED) {
+        console.log('No autorizado');
+    }
+}
