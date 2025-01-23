@@ -349,3 +349,26 @@ function mostrarMensaje (tipoDeError: ERROR_TYPES) {
         console.log('No autorizado');
     }
 }
+
+
+// Aserciones de tipos: 
+// Es decirle a TypeScript que confiamos en que un valor es de un tipo
+const canvas = document.getElementById('canvas')
+
+// Aunque validemos que canvas no sea null, TypeScript no sabe que es
+// ya que canvas devuelve un HTMLElement | null
+// if (canvas != null) {
+//     const ctx = canvas.getContext('2d')
+// }
+
+// Lo mejor sería, hacerlo así ya que así TS ya detecta que es un canvas
+// con la validación y lo infiere
+if (canvas instanceof HTMLCanvasElement) {
+    const ctx = canvas.getContext('2d')
+}
+
+const API_URL: string = 'https://api.github.com/search/repositories?q=language:JavaScript'
+
+const response = await fetch(API_URL)
+
+console.log(response.json());
