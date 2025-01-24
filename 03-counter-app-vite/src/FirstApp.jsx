@@ -11,7 +11,8 @@ const saludar = (name) => {
     return `Hola ${name}`
 }
 
-export const FirstApp = () => {
+// Props son argumentos que se envían a un componente
+export const FirstApp = ({ subTitle }) => {
     return (
         // Para regresar varios elementos en la raiz del functional component 
         // hay que envoverlo en un nodo padre.
@@ -24,10 +25,8 @@ export const FirstApp = () => {
 
         // Otra forma de hacerlo es usando la etiqueta vacía <></> así evitamos la importación
         <>
-            <h1>{ saludar('Yuber Miranda') }</h1>
-            <p>Soy un subtitulo</p>
-            
-            <p>Tengo { newMessage2.age } años</p>
+            <h1>{ saludar('Yuber Miranda') }</h1>            
+            <p>{ subTitle }</p>
             {/* Para renderizar un objeto completo se debe convertir en un string */}
             <code>{ JSON.stringify(newMessage2) }</code>
         </>
