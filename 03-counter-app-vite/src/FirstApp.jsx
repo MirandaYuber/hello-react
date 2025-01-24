@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import { Fragment } from "react"
 
 // No es permitido enviar objetos completos para ser renderizados, para esto se debe convertir
@@ -31,4 +32,8 @@ export const FirstApp = ({ subTitle }) => {
             <code>{ JSON.stringify(newMessage2) }</code>
         </>
     )
+}
+
+FirstApp.propTypes = {
+    subTitle: PropTypes.string.isRequired
 }
