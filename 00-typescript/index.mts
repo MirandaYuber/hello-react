@@ -367,6 +367,8 @@ if (canvas instanceof HTMLCanvasElement) {
     const ctx = canvas.getContext('2d')
 }
 
+
+// Fetching de datos en TS
 const API_URL: string = 'https://api.github.com/search/repositories?q=language:JavaScript'
 
 const response = await fetch(API_URL)
