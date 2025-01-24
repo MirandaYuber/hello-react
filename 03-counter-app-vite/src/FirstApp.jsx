@@ -4,7 +4,7 @@ import { Fragment } from "react"
 // en un array de elementos o en un string.
 const newMessage2 = {
     name: 'Yuber',
-    age: 26
+    age: 23
 }
 
 const saludar = (name) => {
@@ -27,9 +27,9 @@ export const FirstApp = () => {
             <h1>{ saludar('Yuber Miranda') }</h1>
             <p>Soy un subtitulo</p>
             
-            {/* <p>{ newMessage2.age }</p> */}
+            <p>Tengo { newMessage2.age } años</p>
             {/* Para renderizar un objeto completo se debe convertir en un string */}
-            {/* <code>{ JSON.stringify(newMessage2) }</code> */}
+            <code>{ JSON.stringify(newMessage2) }</code>
         </>
     )
 }

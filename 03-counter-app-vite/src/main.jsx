@@ -7,6 +7,8 @@ import ReactDOM from 'react-dom/client'
 // import { HelloWorldApp } from './HelloWorldApp' // Importación por desestructuración
 import { FirstApp } from './FirstApp'
 
+import './styles.css'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
     // Se aconceja usar el modo estricto
     <React.StrictMode>
