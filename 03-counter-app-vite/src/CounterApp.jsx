@@ -5,15 +5,18 @@ import PropTypes from "prop-types"
 export const CounterApp = ({ value }) => {
     // Las funciones que no tengan interacción con el componente 
     // se pueden declarar fuera del componente
-    const handleAdd = (value) => {
-        console.log(value);
+    const handleAdd = (event) => {
+        console.log(event);
     }
 
     return (
         <>
             <h1>CounterApp</h1>
             <h2> { value } </h2>
-            <button onClick={ handleAdd(value) }>
+            <button onClick={ 
+                // (event) => handleAdd(event) // Forma detallada
+                handleAdd 
+                }>
                 +1
             </button>
         </>
