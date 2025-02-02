@@ -40,3 +40,8 @@ Para ejecutar los test ejecutamos:
 ```bash
 yarn test
 ```
+
+En el package.json cambiamos es script de test agregandole la bandera `-- watchAll` para que no tengamos que ejecutar el comando cada vez que querramos hacer pruebas:
+```bash
+"test": "jest --watchAll"
+```
