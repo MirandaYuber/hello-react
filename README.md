@@ -45,3 +45,18 @@ En el package.json cambiamos es script de test agregandole la bandera `-- watchA
 ```bash
 "test": "jest --watchAll"
 ```
+
+Para que el IDE nos ayude con las diferentes opciones de Expect ejecutar el comando:
+```bash
+yarn add -D @types/jest
+```
+
+Si no funciona el autocompletado, cree el archivo `jsconfig.json` en la raiz del proyecto y dentro del archivo escribir:
+```json
+{ 
+    "typeAcquisition": { 
+        "include": [ "jest" ] 
+    } 
+}
+```
+
