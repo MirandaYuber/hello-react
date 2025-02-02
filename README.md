@@ -60,3 +60,16 @@ Si no funciona el autocompletado, cree el archivo `jsconfig.json` en la raiz del
 }
 ```
 
+### Configurar Babel
+Se ejecuta el sigueinte comando:
+```bash
+yarn add --dev babel-jest @babel/core @babel/preset-env
+```
+
+Crear archivo `babel.config.cjs` con lo siguiente:
+```js
+module.exports = {
+  presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
+};
+```
+
