@@ -11,7 +11,7 @@ export const getImagen = async() => {
         return url;
 
     } catch (error) {
-        console.error(error)
+        return 'No existe la imagen'
     }
 }
 
