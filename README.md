@@ -78,3 +78,11 @@ module.exports = {
 };
 ```
 
+### Configuraciones de Jest
+Para configuraciones para especificarle a Jest como se comporte en diferentes casos, se debe crear en la raiz del proyecto
+el archivo `jest.config.js`. En este archivo exportaremos el modulo `jest.setup.js` el cual tendra dependencias que necesitaremos al momento de ejecutar nuestros test.
+
+- Usar fetch en versiones de Node.js < 18:
+
+  Instalamos la librería `whatwg-fetch` para desarrollo y en el archivo `jest.setup.js` importamos esta libreria.
+
