@@ -16,6 +16,11 @@ npm start
 
 ### Vite (yarn)
 ```bash
+# Instalar yarn de forma global
+npm install -g yarn
+```
+
+```bash
 # Crear proyecto
 yarn create vite
 ```
