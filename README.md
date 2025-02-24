@@ -86,3 +86,10 @@ el archivo `jest.config.js`. En este archivo exportaremos el modulo `jest.setup.
 
   Instalamos la librería `whatwg-fetch` para desarrollo y en el archivo `jest.setup.js` importamos esta libreria.
 
+
+### Testing library DOM
+Para testear el DOM vamos a instalar la siguiente libreria para poder probar nuestros componentes de React:
+```bash
+yarn add --dev @testing-library/react
+```
+

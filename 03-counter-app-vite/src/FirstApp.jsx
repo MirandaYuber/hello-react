@@ -15,7 +15,7 @@ const saludar = (name) => {
 // Props son argumentos que se envían a un componente
 export const FirstApp = ({ 
     subTitle,
-    lang
+    lang = 'JS'
 }) => {
     return (
         // Para regresar varios elementos en la raiz del functional component 
@@ -43,11 +43,5 @@ FirstApp.propTypes = {
     subTitle: PropTypes.string.isRequired,
     // Aunque le digamos que la prop es de tipo number, JS permite hacer este 
     // tipo de transformaciones de tipos
-    lang: PropTypes.number
-}
-
-// los defaultProps se inician antes que los propTypes
-FirstApp.defaultProps = {
-    subTitle: 'Soy un subtitulo',
-    lang: 'JS'
+    lang: PropTypes.string
 }
