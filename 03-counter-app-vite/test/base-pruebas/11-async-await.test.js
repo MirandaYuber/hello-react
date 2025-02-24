@@ -4,7 +4,6 @@ describe('Pruebas en 11-aync-await', () => {
     test('getImagen debe retornar un error si no tenemos api key', async() => {
 
         const response = await getImagen()
-        console.log(response);
         expect(typeof response).toBe('string')
         // expect(response.includes('http')).toBe(true)
 

@@ -3,7 +3,6 @@ const { retornaArreglo } = require("../../src/base-pruebas/07-deses-arr")
 describe('Pruebas en 07-deses-arr', () => {
     test('retornaArreglo debe retornar un arreglo', () => {
         const [letters, numbers] = retornaArreglo();
-        console.log(letters, numbers);
 
         expect(letters).toBe('ABC');
         expect(numbers).toBe(123);
