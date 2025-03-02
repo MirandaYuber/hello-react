@@ -1,4 +1,4 @@
-# ReactFernandoHerrera
+# Hello React
 
 Crear proyecto React: https://create-react-app.dev/
 En el curso se hizo con:
