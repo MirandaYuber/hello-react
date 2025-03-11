@@ -84,7 +84,15 @@ el archivo `jest.config.js`. En este archivo exportaremos el modulo `jest.setup.
 
 - Usar fetch en versiones de Node.js < 18:
 
-  Instalamos la librería `whatwg-fetch` para desarrollo y en el archivo `jest.setup.js` importamos esta libreria.
+  Instalamos la librería `whatwg-fetch` con el comando:
+  ```bash
+  yarn add --dev whatwg-fetch
+  ```
+
+  Y en el archivo `jest.setup.js` importamos esta libreria:
+  ```js
+  import 'whatwg-fetch'
+  ```
 
 
 ### Testing library DOM
@@ -94,13 +102,26 @@ yarn add --dev @testing-library/react
 ```
 Para poder testaer nuestros componentes, tendremos que hacer las siguientes configuraciones:
 
-- En el archivo `jest.config.js` tendremos que agregar la siguiente linea `testEnvironment: 'jest-environment-jsdom'`. Despues de esto tendremos que instalarlo con el comando `yarn add --dev jest-environment-jsdom`
+- En el archivo `jest.config.js` tendremos que agregar la siguiente linea:
+  ```js
+  testEnvironment: 'jest-environment-jsdom'
+  ```
 
-- Ahora, tendremos que instalar `@babel/preset-react` usando el comando `yarn add --dev @babel/preset-react`. Despues de esto, en el archivo `babel.config.js` dentro de present se debe agregar:
-```bash
-[
-    '@babel/preset-react', {
-        runtime: 'automatic'
-    }
-]
-```
+  Despues de esto tendremos que instalarlo con el comando:
+  ```bash
+  yarn add --dev jest-environment-jsdom
+  ```
+
+- Ahora, tendremos que instalar `@babel/preset-react` usando el comando: 
+  ```bash
+  yarn add --dev @babel/preset-react
+  ```
+  
+  Despues de esto, en el archivo `babel.config.js` dentro de present se debe agregar:
+  ```bash
+  [
+      '@babel/preset-react', {
+          runtime: 'automatic'
+      }
+  ]
+  ```
