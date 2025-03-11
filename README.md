@@ -125,3 +125,7 @@ Para poder testaer nuestros componentes, tendremos que hacer las siguientes conf
       }
   ]
   ```
+  Y por ultimo debemos instalar `@babel/preset-react` con el comando:
+  ```bash
+  yarn add--dev @babel/preset-react
+  ```
