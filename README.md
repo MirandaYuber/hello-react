@@ -74,12 +74,12 @@ yarn add --dev babel-jest @babel/core @babel/preset-env
 Crear archivo `babel.config.cjs` con lo siguiente:
 ```js
 module.exports = {
-  presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
+  presets: [['@babel/preset-env', {targets: {esmodules: true}}]],
 };
 ```
 
 ### Configuraciones de Jest
-Para configuraciones para especificarle a Jest como se comporte en diferentes casos, se debe crear en la raiz del proyecto
+Para especificarle a Jest como se comporte en diferentes casos, se debe crear en la raiz del proyecto
 el archivo `jest.config.js`. En este archivo exportaremos el modulo `jest.setup.js` el cual tendra dependencias que necesitaremos al momento de ejecutar nuestros test.
 
 - Usar fetch en versiones de Node.js < 18:
@@ -92,4 +92,15 @@ Para testear el DOM vamos a instalar la siguiente libreria para poder probar nue
 ```bash
 yarn add --dev @testing-library/react
 ```
+Para poder testaer nuestros componentes, tendremos que hacer las siguientes configuraciones:
 
+- En el archivo `jest.config.js` tendremos que agregar la siguiente linea `testEnvironment: 'jest-environment-jsdom'`. Despues de esto tendremos que instalarlo con el comando `yarn add --dev jest-environment-jsdom`
+
+- Ahora, tendremos que instalar `@babel/preset-react` usando el comando `yarn add --dev @babel/preset-react`. Despues de esto, en el archivo `babel.config.js` dentro de present se debe agregar:
+```bash
+[
+    '@babel/preset-react', {
+        runtime: 'automatic'
+    }
+]
+```
