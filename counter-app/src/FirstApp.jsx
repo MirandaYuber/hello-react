@@ -30,7 +30,7 @@ export const FirstApp = ({
         // Otra forma de hacerlo es usando la etiqueta vacía <></> así evitamos la importación
         <>
             <h1>{ saludar('Yuber Miranda') }</h1>            
-            <p>{ subTitle }</p>
+            <h2>{ subTitle }</h2>
             <p>{ lang }</p>
             {/* Para renderizar un objeto completo se debe convertir en un string */}
             <code>{ JSON.stringify(newMessage2) }</code>
