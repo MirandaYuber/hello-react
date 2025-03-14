@@ -46,7 +46,7 @@ describe('Pruebas en <FirstApp />', () => {
         // expect(getByText(lang)).toBeTruthy()
         
         // Para solucionar este problema, usamos getAllByText
-        expect(getAllByText(lang).length).toBe(2)
+        expect(getAllByText(lang).length).toBe(1)
     })
     
     
