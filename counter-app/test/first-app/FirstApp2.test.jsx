@@ -1,5 +1,5 @@
 const { render, screen } = require("@testing-library/react")
-const { FirstApp } = require("../src/FirstApp")
+const { FirstApp } = require("../../src/FirstApp")
 
 describe('Pruebas en <FirstApp />', () => {
     const subtitle = 'Hola soy Yuber'

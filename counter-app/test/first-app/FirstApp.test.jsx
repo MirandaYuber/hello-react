@@ -1,5 +1,5 @@
 const { render } = require("@testing-library/react")
-const { FirstApp } = require("../src/FirstApp")
+const { FirstApp } = require("../../src/FirstApp")
 
 describe('Pruebas en <FirstApp />', () => {
     // test('Debe de hacer match con el snapshot', () => {
@@ -24,7 +24,7 @@ describe('Pruebas en <FirstApp />', () => {
         const {container, getByText, getByTestId} =  render(<FirstApp subTitle={title}/>)
         expect(getByText(title)).toBeTruthy()
         // No es una mala practica usar el testId, pero no es recomendado usarlo para todo
-        expect(getByTestId('test-title')).toBeTruthy()
+        expect(getByTestId('test-subtitle')).toBeTruthy()
 
         // Usando Tobe, se asegura de que sea completamente igual
         expect(container.querySelector('#subtitle').innerHTML).toBe(title)
