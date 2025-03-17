@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             Los props son propiedades que se le pueden enviar a un componente desde 
             el componente padre.
         */}
-        <FirstApp subTitle='Subtitulo'/>
-        {/* <CounterApp value={0}/> */}
+        {/* <FirstApp subTitle='Subtitulo'/> */}
+        <CounterApp value={0}/>
     </React.StrictMode>
 )
