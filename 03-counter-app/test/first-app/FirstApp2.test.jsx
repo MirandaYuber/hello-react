@@ -40,5 +40,5 @@ describe('Pruebas en <FirstApp />', () => {
         expect(screen.getByRole('paragraph').innerHTML).toContain('JS')
         expect(screen.getAllByText('JS').length).toBe(1)
         
-    })    
+    })  
 })
