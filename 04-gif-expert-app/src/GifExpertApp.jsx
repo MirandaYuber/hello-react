@@ -5,17 +5,17 @@ const GifExpertApp = () => {
     // Los hooks no tienen nombre, estan basados en su posición 
     const [categories, setCategories] = useState(['One Punch', 'Samurai X', 'Dragon Ball'])
 
-    const onAddCategory = () => {        
-        setCategories(['HunterXHunter', ...categories])
+    const onAddCategory = (newCategory) => {          
+        setCategories([newCategory, ...categories])
     }
 
     return (
         <>
             <h1>Gif expert app</h1>
             
-            <AddCategory />
-
-            <button onClick={onAddCategory}> Agregar categoria </button>
+            {/* Al enviar el setCategories y pasarle un callback, podemos acceder a su estado actual */}
+            <AddCategory setCategories={setCategories}/>
+            {/* <button onClick={onAddCategory}> Agregar categoria </button> */}
 
             <ol>
                 {/* Al usar construcción dinamica, tenemos que proporcionarle una propiedad key para cada elemento */}

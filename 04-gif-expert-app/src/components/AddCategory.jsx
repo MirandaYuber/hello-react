@@ -1,7 +1,9 @@
 import { useState } from "react"
 
-const AddCategory = () => {
-    const [inputValue, setInpuValue] = useState('Dragon Ball')
+const AddCategory = (
+    {setCategories}
+) => {
+    const [inputValue, setInpuValue] = useState('')
 
     const onInputChange = (event) => {        
         setInpuValue(event.target.value)
@@ -9,10 +11,13 @@ const AddCategory = () => {
 
     const onSubmit = (event) => {
         event.preventDefault()
-        console.log(inputValue);
-        
-    }
 
+        if (inputValue.trim().length <= 1) return
+        
+        setCategories(categories =>  [inputValue, ...categories])
+
+        setInpuValue('')
+    }
 
     return (
         <form onSubmit={onSubmit}>
