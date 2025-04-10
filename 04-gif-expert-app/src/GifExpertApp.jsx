@@ -13,8 +13,13 @@ const GifExpertApp = () => {
         <>
             <h1>Gif expert app</h1>
             
-            {/* Al enviar el setCategories y pasarle un callback, podemos acceder a su estado actual */}
-            <AddCategory setCategories={setCategories}/>
+            <AddCategory 
+                // Al enviar el setCategories y pasarle un callback, podemos acceder a su estado actual
+                // setCategories={setCategories}
+
+                onNewCategory={onAddCategory}
+            />
+            
             {/* <button onClick={onAddCategory}> Agregar categoria </button> */}
 
             <ol>
