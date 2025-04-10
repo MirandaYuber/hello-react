@@ -18,7 +18,6 @@ const AddCategory = (
         
         // setCategories(categories =>  [inputValue, ...categories])
         onNewCategory(newInputValue)
-
         setInpuValue('')
     }
 
