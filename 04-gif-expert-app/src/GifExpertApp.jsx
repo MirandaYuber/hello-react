@@ -1,5 +1,6 @@
 import { useState } from "react"
 import AddCategory from "./components/AddCategory"
+import GifGrid from "./components/GifGrid"
 
 const GifExpertApp = () => {
     // Los hooks no tienen nombre, estan basados en su posición 
@@ -24,14 +25,15 @@ const GifExpertApp = () => {
             
             {/* <button onClick={onAddCategory}> Agregar categoria </button> */}
 
-            <ol>
-                {/* Al usar construcción dinamica, tenemos que proporcionarle una propiedad key para cada elemento */}
-                {
-                    categories.map(category => {
-                        return <li key={category}>{category}</li>
-                    })
-                }
-            </ol>
+            {/* Al usar construcción dinamica, tenemos que proporcionarle una propiedad key para cada elemento */}
+            {
+                categories.map((category) => {
+                    return (<GifGrid 
+                        key={category} 
+                        category={category}
+                    />)
+                })
+            }
         </>
     )
 }
