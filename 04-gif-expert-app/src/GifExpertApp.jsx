@@ -5,7 +5,9 @@ const GifExpertApp = () => {
     // Los hooks no tienen nombre, estan basados en su posición 
     const [categories, setCategories] = useState(['One Punch', 'Samurai X', 'Dragon Ball'])
 
-    const onAddCategory = (newCategory) => {          
+    const onAddCategory = (newCategory) => {        
+        if (categories.includes(newCategory)) return
+        
         setCategories([newCategory, ...categories])
     }
 
