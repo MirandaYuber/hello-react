@@ -29,7 +29,7 @@ const GifExpertApp = () => {
             {
                 categories.map((category) => {
                     return (<GifGrid 
-                        key={category} 
+                        key={category}
                         category={category}
                     />)
                 })
