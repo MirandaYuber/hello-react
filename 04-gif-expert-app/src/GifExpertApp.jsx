@@ -4,7 +4,7 @@ import GifGrid from "./components/GifGrid"
 
 const GifExpertApp = () => {
     // Los hooks no tienen nombre, estan basados en su posición 
-    const [categories, setCategories] = useState(['One Punch'])
+    const [categories, setCategories] = useState(['gta'])
 
     const onAddCategory = (newCategory) => {        
         if (categories.includes(newCategory)) return

@@ -1,4 +1,7 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react" 
+
+import GifItem from "./GifItem"
+
 import { getGifs } from "../helpers/getGifs"
 
 const GifGrid = ({ category }) => {
@@ -25,19 +28,24 @@ const GifGrid = ({ category }) => {
     <div>
       <h3>{ category }</h3>
 
-      <ol>
+      {/* 
+        Dentro de un componente, no podemos usar class para las clases de etiquetas
+        ya que seguimos estando dentro de un contexto de JavaScript, para esto usamos className
+      */}
+      <div className="card-grid">
         {
-          images.map(({id, title, url}) => {
-            if (title === '') title = `${category}`
+          images.map((image) => {
+            if (image.title === '') image.title = `${category}`
 
             return(
-              <li key={id}>
-                <a href={url} target="_blank">{title}</a>
-              </li>
+              <GifItem 
+                key={image.id} 
+                {...image}
+              />
             )
           })
         }
-      </ol>
+      </div>
     </div>
   )
 }
