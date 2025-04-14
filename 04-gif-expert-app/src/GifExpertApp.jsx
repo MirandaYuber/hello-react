@@ -1,8 +1,10 @@
 import { useState } from "react"
-import AddCategory from "./components/AddCategory"
-import GifGrid from "./components/GifGrid"
+import {AddCategory,GifGrid} from './components'
+// import AddCategory from "./components/AddCategory"
+// import GifGrid from "./components/GifGrid"
 
-const GifExpertApp = () => {
+
+export const GifExpertApp = () => {
     // Los hooks no tienen nombre, estan basados en su posición 
     const [categories, setCategories] = useState(['gta'])
 
@@ -37,5 +39,3 @@ const GifExpertApp = () => {
         </>
     )
 }
-
-export default GifExpertApp

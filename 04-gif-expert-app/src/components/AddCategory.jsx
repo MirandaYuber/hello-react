@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const AddCategory = (
+export const AddCategory = (
     {onNewCategory}
 ) => {
     const [inputValue, setInpuValue] = useState('')
@@ -33,5 +33,3 @@ const AddCategory = (
         </form>
     )
 }
-
-export default AddCategory

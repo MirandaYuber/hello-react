@@ -1,4 +1,4 @@
-const GifItem = ({
+export const GifItem = ({
   title,
   url
 }) => {
@@ -9,5 +9,3 @@ const GifItem = ({
     </div>
   )
 }
-
-export default GifItem
