@@ -20,12 +20,21 @@ const GifGrid = ({ category }) => {
   // Si se pasa un array con variables, se ejecuta cada vez que alguna de esas variables cambia
 
   // Lo anterior lo podemos simplificar con un hook personalizado
-  const {images} = useFetchGifs(category)
+  const {images, isLoading} = useFetchGifs(category)
   
     
   return (
     <div>
       <h3>{ category }</h3>
+
+      {/* 
+        Hay diferentes formas de condicionar. Ya sea con clases, validación o un componente que se encargue de hacerlo 
+        En este caso, lo hice con un ternario
+      */}
+
+      {
+        isLoading && (<h2>Cargando...</h2>)
+      }
 
       {/* 
         Dentro de un componente, no podemos usar class para las clases de etiquetas
